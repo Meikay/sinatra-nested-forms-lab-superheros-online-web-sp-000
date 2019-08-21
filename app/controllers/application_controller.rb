@@ -4,10 +4,8 @@ class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "../views/") }
 
-    get '/super_hero' do
-      @team_members = Superheroes.all
-
-      erb :'super_hero/index'
+    get '/' do
+      erb :super_hero
     end
 
 
