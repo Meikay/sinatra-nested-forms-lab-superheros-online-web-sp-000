@@ -1,24 +1,44 @@
-<form action="/" method="POST">
-<h2>Hero 1</h2>
-<div class="superheroes">
-  <h4>Hero's Name: <%= @superheroes.name%></h4><br>
-  <h4>Hero's Power: <%= @superheroes.power%> </h4><br>
-  <h4>Hero's Biography: <%= @superheroes.biography%> </h4>
-</div><br>
+<h1>Create a Team and Heroes!</h1>
 
-<h2>Hero 2</h2>
-<div class="superheroes">
-  <h4>Hero's Name: <%= @superheroes.name%></h4><br>
-  <h4>Hero's Power: <%= @superheroes.power%> </h4><br>
-  <h4>Hero's Biography: <%= @superheroes.biography%> </h4>
-</div><br>
+<form action="/teams" method="POST">
 
-<h2>Hero 3</h2>
-<div class="superheroes">
-  <h4>Hero's Name: <%= @superheroes.name%></h4><br>
-  <h4>Hero's Power: <%= @superheroes.power%> </h4><br>
-  <h4>Hero's Biography: <%= @superheroes.biography%> </h4>
-</div><br>
+  <p>
+    <label>Team Name:</label>
+    <input type="text" name="team[name]" >
+    <br>
+    <label>Team Motto:</label>
+    <input type="text" name="team[motto]" >
+  </p>
 
-<button type="submit" value="Enter Info">Submit</button>
+  <p>  
+    <h2>Hero 1</h2>
+    <label>Hero's Name:</label>
+    <input type="text" id="name_1" name="team[members][][name]"> 
+    <label>Hero's Power:</label>
+    <input type="text" id="power_1" name="team[members][][power]">
+    <label>Hero's Biography:</label>
+    <input type="text" id="bio_1" name="team[members][][biography]"> 
+  </p>
+
+  <p>  
+    <h2>Hero 2</h2>
+    <label>Hero's Name:</label>
+    <input type="text" id="name_2" name="team[members][][name]"> 
+    <label>Hero's Power:</label>
+    <input type="text" id="power_2" name="team[members][][power]">
+    <label>Hero's Biography:</label>
+    <input type="text" id="bio_2" name="team[members][][biography]"> 
+  </p>
+
+  <p>  
+    <h2>Hero 3</h2>
+    <label>Hero's Name:</label>
+    <input type="text" id="name_3" name="team[members][][name]"> 
+    <label>Hero's Power:</label>
+    <input type="text" id="power_3" name="team[members][][power]">
+    <label>Hero's Biography:</label>
+    <input type="text" id="bio_3" name="team[members][][biography]"> 
+  </p>
+
+  <button type="submit" value="submit" name="submit">Submit</button>
 </form>
