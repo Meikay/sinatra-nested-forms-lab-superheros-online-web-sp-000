@@ -6,7 +6,7 @@ class App < Sinatra::Base
 
     get '/super_hero' do
       @superheroes = Superheroes.all
-      
+
       erb :'super_hero/index'
     end
 
