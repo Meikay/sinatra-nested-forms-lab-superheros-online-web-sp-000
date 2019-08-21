@@ -1,9 +1,15 @@
-<form action="/" method="POST">
-  <h1>Create a Team and Heroes!</h1>
-  <div class="Teams">
-    <h4>Team Name: <%= @team.name%></h4><br>
-    <h4>Team Motto: <%= @team.motto%> </h4><br>
-  </div><br>
+<h1><%= @team_name %></h1>
+<h2>Team Motto: <%= @team_motto %></h2>
+
+<% @team_members.each.with_index do |hero, index| %>
+
+  <h2>Hero Name: <%= @hero_name[index] %></h2>
+  <p>
+    Hero Power: <%= @hero_power[index] %><br>
+    Hero Biography: <%= @hero_bio[index] %>
+  </p>
+
+  <% end %>
 
 
 
